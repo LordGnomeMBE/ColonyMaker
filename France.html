@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial;
+}
+#container {
+    position:relative;
+}
+
+#img2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#outPopUp {
+  position: absolute;
+  z-index: 15;
+  top: 30%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin:40px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+</style>
+</head>
+<body>
+<div>
+<center><p style="font-size:20px;"><a href="https://lordgnomembe.github.io/ColonyMaker">Lord Gnome's Colony Maker</a> // Turn anything into a 🇫🇷 French Colony!</p></center>
+
+<center>
+<div id="outPopUp" >
+<div id="container">
+    <img id="image" id="img1" style="max-width:383px;max-height:232px;"/>
+    <img src="https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg" id="img2" style="max-width:50%;max-height:40%" /></br>
+</div>
+</br>
+<input type="text" id="fname" name="fname" style="border:0px solid black;width:99%;text-align:center;background-color:transparent;color:black;" placeholder="Your Caption Here (add single space to hide text)">
+</div>
+</center>
+</br></br></br></br></br></br></br></br></br></br></br></br></br><center><p>Other Colony Flag Makers: <a href="https://lordgnomembe.github.io/ColonyMaker/Britain.html">United Kingdom</a> // <a href="https://lordgnomembe.github.io/ColonyMaker/UN.html">United Nations</a> // <a href="https://lordgnomembe.github.io/ColonyMaker/France.html">USA</a> // <a href="mailto:bulwark_bike_0n@icloud.com">Suggest another!</a> </p></center>
+<center><p style="margin-left:20px;margin-right:20px;">Please note this page is still quite rough. It works, but is not visually perfect. Reload the page to enter a new flag.</p></center>
+</div>
+<script>
+var image = document.getElementById('image');
+
+function getUrl() {
+    var url = prompt('Enter image URL');
+    
+    if (url) { 
+        return url;
+    } else {
+        return getUrl();
+    }
+}
+
+image.src = getUrl();
+</script>
+
+</body>
+</html>
